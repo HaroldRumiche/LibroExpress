@@ -4,7 +4,7 @@ import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
+import {  Folder, LayoutGrid, ShoppingBag, BookUser, BookOpen  } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
@@ -13,19 +13,30 @@ const mainNavItems: NavItem[] = [
         href: '/dashboard',
         icon: LayoutGrid,
     },
+    {
+        title: 'Authors',
+        href: '/author/index',
+        icon: BookUser  ,
+    },
+    {
+        title: 'Books',
+        href: '/books/index',
+        icon: BookOpen ,
+    },
+    {
+        title: 'Products',
+        href: '/product/index',
+        icon: ShoppingBag ,
+    },
 ];
 
 const footerNavItems: NavItem[] = [
     {
         title: 'Repository',
-        href: 'https://github.com/laravel/react-starter-kit',
+        href: 'https://github.com/HaroldRumiche/LibroExpress.git',
         icon: Folder,
     },
-    {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits',
-        icon: BookOpen,
-    },
+    
 ];
 
 export function AppSidebar() {
